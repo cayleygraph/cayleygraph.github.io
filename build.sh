@@ -1,4 +1,4 @@
 #!/bin/sh
 
 hugo
-cp -Rvf public/* /opt/caddy/webroot
+sudo cp -Rvf public/* /opt/caddy/webroot

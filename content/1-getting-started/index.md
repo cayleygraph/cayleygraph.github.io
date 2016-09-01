@@ -2,8 +2,8 @@
 chapter = true
 date = "2016-08-31T15:56:49Z"
 icon = "<b>1. </b>"
-next = "/next/path"
-prev = "/prev/path"
+prev = "https://cayley.io/"
+next = "/1-getting-started/installing/"
 title = "Getting Started"
 weight = 0
 
