@@ -1,0 +1,8 @@
+baseurl = "https://cayley.io"
+languageCode = "en-us"
+title = "Cayley.io"
+theme = "hugo-theme-learn"
+createFromSiteMenusMain = true
+
+[params]
+    menu = [ "getting-started", "basics", "cookbook", "graph-theory" ]
