@@ -10,9 +10,6 @@ and then you can set it up locally with
 
 and you should be able to live update and see changes as you go. 
 
-Ohh, and the button CSS was generated on http://www.bestcssbuttongenerator.com/#/21 -- 
-it needs a massive fix / upgrade
-
 # TODO
 
 Literally everything, this is just getting the basic structure in place to build on top of...
