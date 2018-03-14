@@ -1,0 +1,4 @@
+weight: 1
+name: "Built for linked data"
+icon: "fa fa-link"
+description: "Database is built with RDF support, including multiple linked data formats such as NQuads and JSON-LD."

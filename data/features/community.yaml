@@ -1,0 +1,4 @@
+weight: 5
+name: "Community-driven"
+icon: "fa fa-users"
+description: "Our community shares the passion about graphs and linked data.</br>Join us on <a href='https://cayley-slackin.herokuapp.com/'>Slack</a> or <a href='https://discourse.cayley.io/'>Discourse</a>."

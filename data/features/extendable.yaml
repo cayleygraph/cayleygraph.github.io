@@ -1,0 +1,4 @@
+weight: 3
+name: "Highly modular"
+icon: "fa fa-cubes"
+description: "Everything is modular - you can extend it with new formats, backends, query languages or custom logic."

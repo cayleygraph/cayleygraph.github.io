@@ -1,0 +1,4 @@
+weight: 2
+name: "Supports your database"
+icon: "fa fa-database"
+description: "Cayley works on top of your existing database regardless of data model: SQL, NoSQL or even KV."

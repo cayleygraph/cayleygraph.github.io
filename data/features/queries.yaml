@@ -1,0 +1,4 @@
+weight: 4
+name: "Multiple query languages"
+icon: "fa fa-search"
+description: "Support multiple query languages:</br>Gizmo (Gremlin dialect), MQL and GraphQL dialect."

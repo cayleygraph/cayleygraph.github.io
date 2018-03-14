@@ -1,0 +1,4 @@
+weight: 1
+title: "CayleyGraph"
+description: "<p>Open-source graph</br>inspired by the graph database behind Freebase and Google's Knowledge Graph.</p>"
+image: "img/carousel/cayley.png"
