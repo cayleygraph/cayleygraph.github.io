@@ -35,7 +35,7 @@ paginate = 10
 
 [[menu.main]]
     name = "Install"
-    url  = "https://github.com/cayleygraph/cayley/blob/master/docs/Installation.md"
+    url  = "https://github.com/cayleygraph/cayley/blob/master/docs/installation.md"
     weight = 4
 
 [params]
