@@ -1,16 +1,14 @@
----
+before_install:
+  - openssl aes-256-cbc -K $encrypted_3821f99b84e3_key -iv $encrypted_3821f99b84e3_iv
+    -in cayley_site.enc -out ~\/.ssh/cayley_site -d
 install:
   - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.deb
   - sudo dpkg -i /tmp/hugo.deb
-
 script:
   - mkdir content
   - hugo
-
 after_success:
   - set -e
-  - openssl aes-256-cbc -K $encrypted_52a4997c8241_key -iv $encrypted_52a4997c8241_iv -in cayley_site.enc -out /tmp/cayley_site -d
   - eval "$(ssh-agent -s)"
-  - ssh-add /tmp/cayley_site
-  - rm /tmp/cayley_site
+  - ssh-add /.ssh/cayley-site
   - scp -o StrictHostKeyChecking=no -r public root@cayley.io:/opt/caddy/webroot
