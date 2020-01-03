@@ -6,3 +6,10 @@ install:
 script:
   - mkdir content
   - hugo
+
+after_success:
+  - openssl aes-256-cbc -K $encrypted_52a4997c8241_key -iv $encrypted_52a4997c8241_iv -in cayley_site.enc -out /tmp/cayley_site -d
+  - eval "$(ssh-agent -s)"
+  - ssh-add /tmp/cayley_site
+  - rm /tmp/cayley_site
+  - scp -r public root@cayley.io:/opt/caddy/webroot
