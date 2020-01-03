@@ -5,4 +5,5 @@ script:
   - mkdir content
   - hugo
 after_success:
-  - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.cayley.io; set ssl:verify-certificate no; mirror -R public /opt/caddy/webroot"
+  # For master branch deploy using FTP
+  - test $TRAVIS_BRANCH = "master" && lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.cayley.io; set ssl:verify-certificate no; mirror -R public /opt/caddy/webroot"
