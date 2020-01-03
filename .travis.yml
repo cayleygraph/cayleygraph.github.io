@@ -5,5 +5,15 @@ script:
   - mkdir content
   - hugo
 after_success:
-  # For master branch deploy using FTP
-  - test $TRAVIS_BRANCH = "master" && lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.cayley.io; set ssl:verify-certificate no; mirror -R public /opt/caddy/webroot"
+  - |
+    # For master branch deploy using FTP
+    if [[ $TRAVIS_BRANCH == 'master' ]]
+    then
+      # Make job fail for bad status
+      set -u;
+      # Install latest lftp
+      sudo apt-get update;
+      sudo apt-get -y lftp;
+      # Using lftp, update website files on remote server
+      lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.cayley.io; set ssl:verify-certificate no; mirror -R public /opt/caddy/webroot";
+    fi
