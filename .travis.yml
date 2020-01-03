@@ -1,10 +1,3 @@
-before_install:
-  - set -e
-  - eval "$(ssh-agent -s)"
-  - openssl aes-256-cbc -K $encrypted_3821f99b84e3_key -iv $encrypted_3821f99b84e3_iv
-    -in cayley_site.enc -out cayley_site -d
-  - ssh-add cayley-site
-  - rm cayley_site
 install:
   - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.deb
   - sudo dpkg -i /tmp/hugo.deb
@@ -12,4 +5,4 @@ script:
   - mkdir content
   - hugo
 after_success:
-  - scp -o StrictHostKeyChecking=no -r public root@cayley.io:/opt/caddy/webroot
+  - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.cayley.io; set ssl:verify-certificate no; mirror -R public /opt/caddy/webroot"
