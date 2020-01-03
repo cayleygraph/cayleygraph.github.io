@@ -12,4 +12,4 @@ after_success:
   - eval "$(ssh-agent -s)"
   - ssh-add /tmp/cayley_site
   - rm /tmp/cayley_site
-  - scp -r public root@cayley.io:/opt/caddy/webroot
+  - scp -o StrictHostKeyChecking=no -r public root@cayley.io:/opt/caddy/webroot
