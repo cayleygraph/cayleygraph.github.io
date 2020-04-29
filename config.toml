@@ -63,7 +63,7 @@ paginate = 10
     email = "info@cayleygraph.com"
 
     about_us = ""
-    copyright = "Copyright (c) 2018, CayleyGraph; all rights reserved."
+    copyright = "Copyright (c) 2020, CayleyGraph; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
