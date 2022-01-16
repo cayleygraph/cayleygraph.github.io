@@ -18,14 +18,14 @@ paginate = 10
 # Main menu
 
 [[menu.main]]
-    name = "Code"
-    url  = "https://github.com/cayleygraph/cayley"
+    name   = "Documentation"
+    url    = "https://cayley.gitbook.io/cayley/"
     weight = 1
 
-#[[menu.main]]
-#    name = "Blog"
-#    url  = "/blog/"
-#    weight = 2
+[[menu.main]]
+    name = "Code"
+    url  = "https://github.com/cayleygraph/cayley"
+    weight = 2
 
 [[menu.main]]
     name = "Community"
@@ -35,7 +35,7 @@ paginate = 10
 
 [[menu.main]]
     name = "Install"
-    url  = "https://github.com/cayleygraph/cayley/blob/master/docs/installation.md"
+    url  = "https://cayley.gitbook.io/cayley/installation"
     weight = 4
 
 [params]
