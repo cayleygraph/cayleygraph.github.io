@@ -1,4 +1,4 @@
-baseurl = "https://cayley.io/"
+baseurl = "https://cayleygraph.github.io/"
 title = "Cayley"
 theme = "hugo-universal-theme"
 #themesDir = "../.."
